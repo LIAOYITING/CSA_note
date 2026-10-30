@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>乙級電腦軟體應用 學科重點筆記</title>
+<style>
+:root{--bg:#fbfaf7;--card:#fff;--ink:#1f2328;--muted:#5f6670;--line:#e4e1da;--accent:#b4462b;--accent-soft:#f7e9e4;--code:#f3f1ec;--mark:#ffe58a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181b;--card:#1e2125;--ink:#e6e3dd;--muted:#9aa0a8;--line:#30343a;--accent:#e9876c;--accent-soft:#3a2620;--code:#262a2f;--mark:#7a6312}}
+:root[data-theme="dark"]{--bg:#16181b;--card:#1e2125;--ink:#e6e3dd;--muted:#9aa0a8;--line:#30343a;--accent:#e9876c;--accent-soft:#3a2620;--code:#262a2f;--mark:#7a6312}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-inner{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:12px;align-items:center}
+.top-inner strong{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#q{flex:1;min-width:0;max-width:420px;margin-left:auto;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;font-size:15px}
+button.tg{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:7px 10px;cursor:pointer;font:inherit;font-size:14px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:40px}
+nav.toc{position:sticky;top:72px;align-self:start;max-height:calc(100vh - 90px);overflow:auto;padding:24px 0;font-size:14px}
+nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:4px 10px;border-left:2px solid transparent}
+nav.toc a.sub{padding-left:22px;font-size:13px}
+nav.toc a:hover,nav.toc a.on{color:var(--accent);border-left-color:var(--accent)}
+main{padding:28px 0 80px;min-width:0}
+h1{font-size:30px;line-height:1.3;margin:0 0 6px}
+.byline{color:var(--muted);font-size:14px;margin-bottom:28px}
+h2{font-size:22px;margin:48px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:17px;margin:28px 0 8px;color:var(--accent)}
+p{margin:8px 0}
+ul{padding-left:22px;margin:8px 0}
+li{margin:4px 0}
+a{color:var(--accent)}
+.tbl{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:8px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--accent-soft);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code,kbd{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--code);padding:1px 5px;border-radius:4px}
+pre{background:var(--code);padding:12px 14px;border-radius:8px;overflow-x:auto;font-size:14px}
+.tip{background:var(--accent-soft);border-left:4px solid var(--accent);padding:10px 14px;border-radius:6px;margin:12px 0}
+.hide{display:none!important}
+mark{background:var(--mark);color:inherit;border-radius:2px}
+#none{display:none;color:var(--muted);padding:20px 0}
+@media (max-width:860px){.wrap{grid-template-columns:1fr;gap:0}nav.toc{display:none}h1{font-size:25px}.top-inner strong{display:none}#q{max-width:none}}
+@media print{header.top,nav.toc{display:none}.wrap{display:block}body{background:#fff;color:#000;font-size:12pt}h2{break-after:avoid}.tbl,li{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+<strong>乙級電腦軟體應用 學科重點筆記</strong>
+<input id="q" type="search" placeholder="搜尋關鍵字（例：DHCP、Ctrl、子網路）">
+<button class="tg" id="theme" title="切換深淺色">◐</button>
+</div></header>
+
+<div class="wrap">
+<nav class="toc" id="toc"></nav>
+<main id="main">
+<h1>乙級電腦軟體應用 學科重點筆記</h1>
+<div class="byline">整理日期 2026-10-30 · 資料來源 <a href="https://liaoyiting.github.io/CSA/">乙級電腦軟體應用學科詳解</a></div>
+
+<section>
+<h2 id="s0">題庫概況與讀法</h2>
+<p>本筆記整理自全部 895 題的解析，把重複出現的觀念濃縮成考點。電腦概論與網路佔三成以上，最該優先熟讀。</p>
+<div class="tbl"><table>
+<tr><th>章節</th><th>題數</th><th>對應筆記</th></tr>
+<tr><td>工作項目 01 電腦概論與網路</td><td>326</td><td>第 1–3 節</td></tr>
+<tr><td>工作項目 03 系統軟體（Windows、Linux、網路）</td><td>184</td><td>第 5 節</td></tr>
+<tr><td>工作項目 02 應用軟體（Office、Access、影像）</td><td>177</td><td>第 4 節</td></tr>
+<tr><td>工作項目 04 資訊安全</td><td>89</td><td>第 6 節</td></tr>
+<tr><td>第 101–105 組（硬體、網路、OS、C/C++、資安）</td><td>119</td><td>併入各節</td></tr>
+</table></div>
+<p class="tip">讀法：先背「易混淆對照」，再看第 7 節的計算公式。題目常問「何者錯誤」，所以每個考點都附上常見的錯誤說法。</p>
+</section>
+
+<section>
+<h2 id="s1">1. 電腦概論：硬體、數字、記憶體</h2>
+<p>最常考的是 CPU 內部元件分工、記憶體速度階層與數字系統換算。</p>
+<h3>五大單元與 CPU</h3>
+<ul>
+<li>五大單元：輸入、輸出、記憶、算術邏輯（ALU）、控制（CU）。指揮協調＝控制單元；實際運算＝ALU。</li>
+<li>CPU 內含：控制單元、ALU、暫存器、快取記憶體。</li>
+<li>程式計數器（PC）存「下一個」指令位址，屬控制單元；指令暫存器（IR）存「目前」指令。</li>
+<li>機器週期：擷取 → 解碼 → 執行 → 寫回（沒有「編碼」「重載」）。指令週期（I-cycle）＝提取、解碼、取運算元位址；執行週期（E-cycle）＝執行、存回。</li>
+<li>定址模式的用途＝運算元提取。</li>
+<li>匯流排三種：資料（雙向）、位址（單向，CPU 只輸出）、控制。定址空間只看位址線：n 條 → 2<sup>n</sup> Bytes。</li>
+<li>雙核心＝兩個實體核心平行運算，耗電不是 2 倍；Hyper-Threading＝單核模擬兩個邏輯處理器。</li>
+<li>中斷：硬體中斷是非同步事件；高優先權中斷可打斷低優先權（巢狀中斷）。</li>
+<li>CPU 只執行機器語言；時脈越高（同架構）越快。</li>
+</ul>
+<h3>記憶體與儲存</h3>
+<ul>
+<li>速度：暫存器 ＞ 快取 ＞ 主記憶體（RAM）＞ SSD ＞ 硬碟 ＞ 光碟。</li>
+<li>RAM 揮發性；SRAM（正反器，快、貴、做快取）vs DRAM（電容，需刷新、密度高、做主記憶體）。題庫認定 DRAM 耗電較少。</li>
+<li>ROM 非揮發，存 BIOS/UEFI，開機執行 POST；新版 BIOS 在快閃 ROM，可更新。EPROM＝可消除可規劃 ROM。</li>
+<li>快取容量遠小於主記憶體；Disk Cache＝用記憶體加速磁碟。</li>
+<li>虛擬記憶體＝硬碟模擬記憶體，可執行比實體記憶體大的程式；虛擬磁碟（RAM Disk）＝記憶體模擬磁碟，兩者相反。</li>
+<li>硬碟存取時間＝搜尋時間 ＋ 旋轉延遲 ＋ 資料傳輸時間；最小存取單位是磁區。磁柱 ＞ 磁軌 ＞ 叢集 ＞ 磁區。</li>
+<li>SSD 用快閃記憶體、無機械旋轉；HDD 單顆容量最大。SATA＝序列、可熱插拔；IDE＝並列。</li>
+<li>光碟容量：CD 約 700MB；DVD 4.7GB（單層）/ 8.5GB（雙層），650nm 紅光；BD 25GB / 50GB，405nm 藍光。DVD 燒錄機不能燒 BD。DVD-RAM、-RW、+RW 可重複寫。</li>
+</ul>
+<h3>數字系統與編碼</h3>
+<ul>
+<li>有號 8 位元範圍 −128～+127；無號 0～255。</li>
+<li>十進位小數不一定能用有限位二進位表示（0.1、0.815 會有誤差；0.5、0.625、0.5625 可精確）。</li>
+<li>ASCII 順序：數字（48–57）＜ 大寫（65–90）＜ 小寫（97–122）。「F」＝70＝01000110。</li>
+<li>Unicode 碼位有限（到 U+10FFFF），與 ASCII 相容。Big-5 中文字＝2 Bytes。</li>
+<li>錯誤偵測：同位元、CRC、Checksum 只能偵錯；漢明碼可更正。奇同位＝1 的個數為奇數。</li>
+<li>單位：K M G T P E Z Y，每級 2<sup>10</sup>（1TB＝2<sup>40</sup> Bytes）。大數據 3V＝Volume、Velocity、Variety。</li>
+</ul>
+<h3>布林代數</h3>
+<ul>
+<li>狄摩根：(A+B)'＝A'B'；(AB)'＝A'+B'。</li>
+<li>A(A'+B)＝AB；A+A'B'＝A+B'；X'Y+XY'＝X⊕Y。</li>
+<li>XOR：相同為 0、不同為 1。判斷同網段用 IP AND 子網路遮罩。</li>
+</ul>
+<h3>周邊與介面</h3>
+<ul>
+<li>輸入：鍵盤、滑鼠、麥克風、掃描器、光筆、數位相機；輸出：螢幕、印表機、喇叭、繪圖機。</li>
+<li>螢幕更新率單位 Hz；解析度 640×480＝水平×垂直。</li>
+<li>點陣圖放大會失真；向量圖不會。灰階＝不同亮度的灰；HDMI 傳數位影音、支援熱插拔；USB 隨插即用。</li>
+</ul>
+</section>
+
+<section>
+<h2 id="s2">2. 網路與通訊</h2>
+<p>網路題最集中在 OSI 分層、埠號、IP 分級與網路設備對應的層級。</p>
+<h3>OSI 七層與設備</h3>
+<div class="tbl"><table>
+<tr><th>層</th><th>名稱</th><th>重點</th><th>設備／協定</th></tr>
+<tr><td>7</td><td>應用層</td><td>直接服務使用者</td><td>HTTP、FTP、SMTP、POP3、Telnet、DNS、TFTP</td></tr>
+<tr><td>6</td><td>表示層</td><td>編碼、加密、壓縮</td><td></td></tr>
+<tr><td>5</td><td>會議層</td><td>建立與維持對話</td><td></td></tr>
+<tr><td>4</td><td>傳輸層</td><td>端對端可靠傳輸</td><td>TCP、UDP</td></tr>
+<tr><td>3</td><td>網路層</td><td>邏輯定址、路由選擇</td><td>IP、ICMP、路由器</td></tr>
+<tr><td>2</td><td>資料鏈結層</td><td>MAC 位址、訊框</td><td>橋接器、交換器</td></tr>
+<tr><td>1</td><td>實體層</td><td>電氣訊號</td><td>中繼器、集線器、纜線</td></tr>
+</table></div>
+<ul>
+<li>TCP/IP 四層：應用、傳輸、網際網路、網路存取。</li>
+<li>中繼器＝放大整形訊號；集線器＝廣播到所有埠；橋接器＝連接兩個同類型 LAN；路由器＝建路由表選路徑、可取代橋接器、預設不轉送廣播。</li>
+<li>交換器每個埠是獨立碰撞網域；分割網路會增加網域數、降低碰撞。儲存轉送＝先檢查 CRC，延遲較高但能濾掉錯誤訊框。</li>
+<li>路由表沒有 MAC 位址；OSPF（鏈結狀態）以 flooding 傳 LSA。</li>
+</ul>
+<h3>TCP、UDP 與常用埠號</h3>
+<ul>
+<li>TCP：連接導向、三向交握、可靠、流量與壅塞控制；不負責加密。UDP：無連接、快。</li>
+<li>使用 TCP：HTTP、FTP、SMTP、Telnet、SSH。使用 UDP：DHCP、TFTP、SNMP、DNS 查詢。</li>
+</ul>
+<div class="tbl"><table>
+<tr><th>服務</th><th>埠號</th><th>服務</th><th>埠號</th></tr>
+<tr><td>FTP</td><td>20/21</td><td>HTTP</td><td>80</td></tr>
+<tr><td>SSH</td><td>22</td><td>POP3</td><td>110</td></tr>
+<tr><td>Telnet</td><td>23</td><td>SNMP</td><td>161</td></tr>
+<tr><td>SMTP</td><td>25</td><td>HTTPS</td><td>443</td></tr>
+<tr><td>DNS</td><td>53</td><td>TFTP</td><td>69</td></tr>
+<tr><td>DHCP</td><td>67/68</td><td>Gopher</td><td>70</td></tr>
+</table></div>
+<ul><li>非預設埠寫法：<code>http://www.myweb.com.tw:8000/</code></li></ul>
+<h3>IP 位址</h3>
+<ul>
+<li>IPv4＝32 位元（每段 0–255，256 不合法）；IPv6＝128 位元，支援 Unicast/Multicast/Anycast、內建 IPSec、自動設定。</li>
+<li>分級看第一段：A 1–126、B 128–191、C 192–223、D 224–239（群播）。預設遮罩 A 255.0.0.0。</li>
+<li>私有 IP：10.0.0.0/8、172.16.0.0–172.31.255.255、192.168.0.0/16。</li>
+<li>DHCP 自動配發 IP、遮罩、閘道、DNS；動態 IP 連線時才取得。NAT／寬頻分享器讓多台共用公有 IP。</li>
+<li>DNS 正向解析＝名稱查 IP；反向解析＝IP 查名稱。ARP＝IP 轉 MAC。</li>
+<li>ICMP 封裝在 IP 封包內、回報錯誤；ping 測連通、tracert/traceroute 追路徑、ipconfig/ifconfig 看設定、netstat 看連線統計。</li>
+</ul>
+<h3>拓樸、媒介與傳輸</h3>
+<ul>
+<li>單工（廣播）、半雙工（對講機）、全雙工（電話）。</li>
+<li>星狀：中央控制，中央壞全網停；匯流排：一條主幹；環狀：節點數有限制。</li>
+<li>頻寬：光纖 ＞ 同軸電纜 ＞ 雙絞線。光纖可傳類比與數位、不受電磁干擾、衰減小、常用於骨幹。</li>
+<li>分封交換＝存轉式、封包有長度上限；電路交換先建專線。ATM 以 53 Bytes Cell 傳輸、可相容不同速率。</li>
+<li>乙太網路 CSMA/CD（碰撞偵測，隨機 Backoff）；Wi-Fi 802.11 用 CSMA/CA（碰撞避免）、半雙工。</li>
+<li>藍牙 2.4GHz、約 10m／100m，藍牙 4.0 約 60m（200 英呎）；NFC 約 10 公分，用於行動支付；紅外線需直線對準。</li>
+<li>Modem＝數位↔類比調變解調；WDS 讓 AP 無線互連（同頻道、同加密）。</li>
+<li>電子郵件：寄信 SMTP；收信 POP3／IMAP。密件副本收件者看得到正本與副本名單。</li>
+<li>WWW＝Client/Server、HTTP；伺服器端程式 PHP、ASP、JSP、CGI；用戶端 JavaScript、VBScript、Java Applet。Proxy 快取網頁加速瀏覽；RSS 用 XML 推送更新。</li>
+</ul>
+</section>
+
+<section>
+<h2 id="s3">3. 資料庫、資料結構、程式與新興科技</h2>
+<h3>資料庫與 SQL</h3>
+<ul>
+<li>資料庫模型：階層、網路、關聯、物件導向（星狀是網路拓樸，不是資料庫模型）。ER 模型＝概念模型。</li>
+<li>關聯式以「內容」查詢；主鍵必須唯一且不可 NULL，外來鍵可重複。DBMS 目的是「減少」重複。</li>
+<li>正規化消除重複與異常：1NF → 2NF（非主鍵屬性完全功能相依主鍵）→ 3NF。</li>
+<li>SQL 三類：DDL（CREATE/ALTER/DROP）、DML（SELECT/INSERT/UPDATE/DELETE）、DCL（GRANT/REVOKE）。</li>
+<li><code>INSERT INTO T (a,b) VALUES (1,2);</code> 不能漏 VALUES。DELETE 沒加 WHERE＝刪光全部資料（結構保留）；DROP TABLE 刪整表。</li>
+<li>ORDER BY … ASC 遞增（預設）、DESC 遞減。部分字串比對用 <code>LIKE '台中市%'</code>，不是 =。</li>
+<li>LEFT JOIN 保留左表每筆（至少出現一次）；CROSS JOIN 筆數 N×M、欄位 X+Y。</li>
+<li>關聯代數：選擇 σ 挑列（WHERE）；投影 π 挑欄（SELECT 欄位）。</li>
+<li>交易 ACID：Atomicity 不可分割、Consistency、Isolation、Durability。</li>
+<li>資料倉儲：主題導向、整合、時間變動、「非揮發」；模型為星狀、雪花、星座。資料探勘做在資料倉儲上。</li>
+<li>View＝虛擬表格，可合併多表、隱藏欄位。</li>
+</ul>
+<h3>資料結構與演算法</h3>
+<ul>
+<li>堆疊 Stack＝LIFO：副程式返回位址、遞迴、參數傳遞；滿了再 push＝溢位。</li>
+<li>佇列 Queue＝FIFO：鍵盤緩衝、列印、工作排程。</li>
+<li>排序：快速排序平均 O(n log n) 最快；氣泡、選擇、插入 O(n²)。氣泡排序可大到小。資料太大放不進主記憶體＝外部排序。</li>
+<li>區段搜尋只要求區段之間有序，區段內不必排序。</li>
+</ul>
+<h3>程式語言與系統程式</h3>
+<ul>
+<li>編譯器整份翻成目的碼，只能抓語法錯誤；直譯器一行翻一行執行；組譯器處理組合語言（低階）。</li>
+<li>連結器產生執行檔；載入程式（Loader）四功能：配置、連結、重定位、載入（沒有緊結）。</li>
+<li>結構化程式：循序、選擇、重複三結構；單一入口、單一出口；避免 GO TO；缺點是較占記憶體。</li>
+<li>Java 編成 Bytecode，由 JVM 執行而跨平台；UML 是塑模語言，不是網頁語言。</li>
+<li>C/C++：main 為進入點；區塊用 { }；常數不可改值；關鍵字小寫（while 不是 While）；do…while 至少執行一次。</li>
+</ul>
+<h3>作業系統觀念</h3>
+<ul>
+<li>OS 功能：行程、記憶體、I/O、檔案管理；排序、輸入法不是 OS 功能。</li>
+<li>排程：FIFO、SJF（平均等待最短，會飢餓）、RR（時間配額、處理器共享）；Race Condition 不是排程法。</li>
+<li>分時系統一定是多程式系統，反之不一定；多工不一定需要平行處理。</li>
+<li>批次處理：銀行計息、薪資；分時處理：多使用者輪流用 CPU。</li>
+</ul>
+<h3>新興科技</h3>
+<ul>
+<li>物聯網三層：感知層（RFID、感測器、三軸加速器）、網路層（通訊、雲端運算、NGN）、應用層（智慧交通、醫療）。IBM「智慧地球」＝物聯網雛型。</li>
+<li>RFID 標籤：Active、Passive、Semi-Passive；NFC 用於電子支付。</li>
+<li>Hadoop：HDFS 分散儲存、一次寫入多次讀取；MapReduce 分派再彙整；Hive 類 SQL；Streaming 用外部腳本。</li>
+<li>Spark：In-Memory 運算、核心為 RDD；MLlib 機器學習。NoSQL：Key-Value、免固定綱要、水平擴充、非同步複製；BigTable 是 NoSQL。R 是開源統計語言。</li>
+<li>Web 1.0 單向、2.0 互動、3.0 語意網。PayPal＝第三方支付。雲端 IaaS／PaaS／SaaS。</li>
+<li>資訊系統轉換：平行式最安全、成本最高；直接、引導式、階段式。</li>
+</ul>
+</section>
+
+<section>
+<h2 id="s4">4. 應用軟體：Word、Excel、PowerPoint、Access、影像</h2>
+<p>這章以快速鍵、功能所在位置與「做不到的事」為主。</p>
+<h3>快速鍵總表</h3>
+<div class="tbl"><table>
+<tr><th>軟體</th><th>快速鍵</th><th>功能</th></tr>
+<tr><td>Word</td><td><kbd>Ctrl+Enter</kbd></td><td>分頁（表格內可強制從該列換頁）</td></tr>
+<tr><td>Word</td><td><kbd>Shift+Enter</kbd></td><td>手動換行（不分段）</td></tr>
+<tr><td>Word</td><td><kbd>Ctrl+Home</kbd> / <kbd>Ctrl+End</kbd></td><td>文件開頭 / 結尾</td></tr>
+<tr><td>Word</td><td><kbd>Ctrl+J</kbd></td><td>左右對齊（調整字元間距）</td></tr>
+<tr><td>Word</td><td><kbd>F4</kbd> / <kbd>Ctrl+Y</kbd></td><td>重複上一個動作（F3 不是）</td></tr>
+<tr><td>Word</td><td><kbd>Ctrl+N</kbd> / <kbd>Ctrl+O</kbd></td><td>開新文件 / 開啟舊檔</td></tr>
+<tr><td>Word</td><td><kbd>Alt</kbd>+拖曳</td><td>矩形（垂直區塊）選取；尺規上顯示精確距離</td></tr>
+<tr><td>Word</td><td><kbd>Ctrl</kbd>+拖曳</td><td>複製（直接拖曳＝搬移）</td></tr>
+<tr><td>Word</td><td><kbd>Alt+Shift+X</kbd></td><td>標記索引項目</td></tr>
+<tr><td>Word</td><td><kbd>Ctrl+Shift+F9</kbd></td><td>取消功能變數連結（Ctrl+F9 是插入功能變數）</td></tr>
+<tr><td>Excel</td><td><kbd>Alt+Enter</kbd></td><td>儲存格內換行</td></tr>
+<tr><td>Excel</td><td><kbd>Ctrl+;</kbd> / <kbd>Ctrl+Shift+;</kbd></td><td>目前日期 / 目前時間</td></tr>
+<tr><td>Excel</td><td><kbd>F7</kbd></td><td>拼字檢查</td></tr>
+<tr><td>Excel</td><td><kbd>Ctrl+PgUp/PgDn</kbd></td><td>切換工作表（Alt+Tab 切換的是應用程式）</td></tr>
+<tr><td>Office</td><td><kbd>Alt+F11</kbd></td><td>VBA 編輯器</td></tr>
+</table></div>
+<h3>Word</h3>
+<ul>
+<li>選取區按一下＝一行、兩下＝一段、三下＝整份文件。</li>
+<li>不同頁碼格式、頁首頁尾、紙張方向要「分節」；設定欄數會自動插入分節符號。</li>
+<li>每頁相同位置的圖案放在頁首/頁尾；花邊在「頁面框線」；刪除裁剪區域用「壓縮圖片」。</li>
+<li>防寫密碼仍可唯讀開啟並複製；範本可再存成新範本（.dotx）；縮放比例不影響列印。</li>
+<li>表格轉文字框線會消失；儲存格網底只能單色＋圖樣（不能圖片、漸層、材質）。</li>
+<li>合併列印的 Excel 資料來源一次只能一個工作表。萬用字元取代時 ( ) 分組、<code>\2</code> 代表第 2 組。</li>
+<li>並列文字字型縮為一半；圍繞字元一次一個中文字；標號用 {SEQ}，用於圖、表、方程式。</li>
+<li>避頭字元：問號、冒號、逗號、句號、右括號等不放行首。</li>
+</ul>
+<h3>Excel</h3>
+<ul>
+<li>參照運算子：「:」範圍、「,」聯集、空格＝交集；&amp; 串接文字（結果為文字，日期格式無效）。</li>
+<li>相對位址複製時會變；$ 固定。條件式格式每列判斷 E 欄：<code>=$E2&lt;60</code>。</li>
+<li>錯誤值：##### 欄寬不足（不是公式錯）；#DIV/0!、#N/A、#NAME?、#REF!、#VALUE!。</li>
+<li>RAND() 亂數、ROUND() 四捨五入、INT() 取整；格式只改顯示，計算用真實值。</li>
+<li>MAX／MIN／COUNT 以範圍參照時忽略文字，全無數值回傳 0。偶數列：<code>=MOD(ROW(),2)=0</code>。</li>
+<li>民國年輸入 r109/11/10；會計專用格式貨幣符號靠左，負號在前（-$ 0.96）。自訂格式 # 只顯示有效位數，_ 保留一字元空白。</li>
+<li>保護工作表＝內容、物件、分析藍本；保護活頁簿＝結構與視窗（不管儲存格）。</li>
+<li>目標搜尋＝反推「一個」變數；規劃求解可多變數。小計前必須先排序。</li>
+<li>進階篩選準則可用函數；同列 AND、不同列 OR。圓形圖只能一個數列。</li>
+<li>列印：開檔直接按列印只印使用中工作表；整本活頁簿要在「列印內容」選擇；起始頁碼在「版面設定 → 頁面」。合併活頁簿無法復原。</li>
+</ul>
+<h3>PowerPoint</h3>
+<ul>
+<li>副檔名：.pptx 簡報、.potx 範本、.ppsx 播放檔（不開 PowerPoint 即可播放）；.dotx 是 Word 範本。</li>
+<li>每張投影片換頁時間可各自設定（排練計時）；動畫開始：按一下、與前動畫同時、接續前動畫。</li>
+<li>大綱模式只顯示版面配置區文字；投影片編號在「投影片母片」調整；多張圖一次插入用「相簿」。</li>
+<li>封裝成光碟也可複製到資料夾。不能插入可運作的資料庫表單。</li>
+</ul>
+<h3>Access 與檔案格式</h3>
+<ul>
+<li>Access 是關聯式資料庫；強迫參考完整性防止刪除仍有子記錄的主記錄。</li>
+<li>主索引鍵不可重複；備忘、OLE、附件欄位不能當主索引鍵。標籤是非結合控制項。</li>
+<li>交叉資料表查詢需搭配合計；萬用字元 * 任意多字、? 恰一字。Word 檔不能匯入 Access。</li>
+<li>OOXML（.docx/.xlsx/.pptx）＝ISO/IEC 29500；ODF（.odt/.ods/.odp）＝ISO/IEC 26300；.doc 是二進位格式。</li>
+</ul>
+<h3>影像處理</h3>
+<ul>
+<li>Photoshop 以點陣為主、原生 PSD 保留圖層；Illustrator 以向量為主（.ai）。</li>
+<li>色彩三屬性：色相、飽和度、亮度。網頁圖檔：GIF、JPEG、PNG。</li>
+<li>照片大小＝(吋×dpi)²×3 Bytes（全彩 24 位元），見第 7 節。</li>
+</ul>
+</section>
+
+<section>
+<h2 id="s5">5. 系統軟體：Windows 與 Linux</h2>
+<h3>Windows 功能位置</h3>
+<div class="tbl"><table>
+<tr><th>想做的事</th><th>去哪裡</th></tr>
+<tr><td>新增、設定印表機</td><td>控制台 → 硬體和音效 → 裝置和印表機</td></tr>
+<tr><td>貨幣符號、日期格式</td><td>時鐘和區域 → 地區</td></tr>
+<tr><td>桌面背景、佈景主題</td><td>外觀及個人化／個人化</td></tr>
+<tr><td>檢視更新驅動程式（只管硬體）</td><td>裝置管理員；黃色驚嘆號＝驅動程式有問題</td></tr>
+<tr><td>解除安裝軟體</td><td>程式和功能</td></tr>
+<tr><td>釋放硬碟空間</td><td>磁碟清理</td></tr>
+<tr><td>找拖慢效能的程式</td><td>工作管理員；長期紀錄看效能監視器</td></tr>
+<tr><td>編輯登錄檔</td><td>登錄編輯程式 regedit</td></tr>
+<tr><td>變更搜尋範圍</td><td>索引選項</td></tr>
+<tr><td>開機自動執行</td><td>「啟動」資料夾</td></tr>
+</table></div>
+<ul>
+<li>檔案屬性：唯讀、隱藏、系統、封存（沒有「保留」）；光碟檔案是唯讀。驅動程式 .SYS/.DRV；程式庫 .DLL。</li>
+<li>共用權限：完全控制（含改權限、取得擁有權）＞ 變更（讀寫刪）＞ 讀取。</li>
+<li>BitLocker＝整個磁碟區加密；EFS＝個別檔案加密。</li>
+<li>Hyper-V 內建於專業版，需在 BIOS 開啟 Intel VT／AMD-V。</li>
+<li>工作排程器觸發：時間、開機、登入、閒置、事件（不能在關機時執行）。省電計畫會降低效能。</li>
+<li>網域：PDC 集中驗證帳號；RODC 唯讀網域控制站。網路位置：網域／私人／公用。</li>
+<li>隨插即用需硬體、BIOS、OS 配合。字型是所有使用者共用。時間預設與 time.windows.com 同步。</li>
+<li>指令：ping、ipconfig、tracert、netstat、exit。</li>
+</ul>
+<h3>Linux／Unix 指令</h3>
+<div class="tbl"><table>
+<tr><th>功能</th><th>指令</th></tr>
+<tr><td>列目錄 / 含隱藏檔</td><td><code>ls</code> / <code>ls -a</code></td></tr>
+<tr><td>改名、搬移</td><td><code>mv</code></td></tr>
+<tr><td>刪除</td><td><code>rm</code></td></tr>
+<tr><td>建連結（捷徑）</td><td><code>ln</code>（<code>ln -s</code> 符號連結）</td></tr>
+<tr><td>搜尋檔案</td><td><code>find</code></td></tr>
+<tr><td>看文字檔</td><td><code>cat</code>、<code>more</code>、<code>less</code></td></tr>
+<tr><td>目前路徑</td><td><code>pwd</code></td></tr>
+<tr><td>登入中使用者</td><td><code>who</code></td></tr>
+<tr><td>新增使用者 / 群組</td><td><code>adduser</code>(<code>useradd</code>) / <code>groupadd</code></td></tr>
+<tr><td>改權限</td><td><code>chmod</code>（755＝rwxr-xr-x）</td></tr>
+<tr><td>網路介面 / 路由表</td><td><code>ifconfig</code> / <code>route</code></td></tr>
+<tr><td>追蹤路徑</td><td><code>traceroute</code></td></tr>
+<tr><td>說明手冊</td><td><code>man</code></td></tr>
+<tr><td>磁碟用量</td><td><code>df</code>（檔案系統）、<code>du</code>（目錄）</td></tr>
+<tr><td>備份封裝</td><td><code>tar</code>、<code>dump</code>、<code>cpio</code></td></tr>
+<tr><td>效能監看</td><td><code>top</code>、<code>sar</code>、<code>vmstat</code></td></tr>
+<tr><td>重開機</td><td><code>reboot</code>、<code>shutdown -r</code>、<code>init 6</code></td></tr>
+<tr><td>卸載</td><td><code>umount</code>、<code>eject</code></td></tr>
+<tr><td>列印</td><td><code>lpr</code></td></tr>
+<tr><td>防火牆</td><td><code>iptables</code></td></tr>
+</table></div>
+<ul>
+<li>Linux 是多人多工、支援 TCP/IP；管理者帳號 root；「~」是自己的家目錄（不是管理者）。</li>
+<li>權限三組：r=4、w=2、x=1。開機掛載設定 /etc/fstab；交換空間 swap；新檔案系統常見 XFS。</li>
+<li>伺服器：NFS（Linux/Unix 檔案分享，透過 RPC）、Samba（與 Windows 分享，security = share / domain）、BIND（DNS，設定檔 named.conf）、Apache（HTTPS 443）、Squid（Proxy 快取）。</li>
+<li>RPM 檔名的 noarch＝不限硬體架構。</li>
+<li>開機時由 ROM 的啟動程式（IPL／Bootstrap）把 OS 載入記憶體；OS 裝在硬碟，不是燒在主機板。</li>
+</ul>
+</section>
+
+<section>
+<h2 id="s6">6. 資訊安全</h2>
+<p>資安題多是常識判斷，抓住「題庫標準答案的原則」就能拿分：密碼不共用、備份分地存放、防火牆不等於防毒。</p>
+<h3>核心觀念</h3>
+<ul>
+<li>資安三要素 CIA：機密性（Confidentiality）、完整性（Integrity）、可用性（Availability）；另有可靠性、身分識別（Authentication）、不可否認性。</li>
+<li>弱點（Vulnerability）是系統本身的瑕疵；最大的弱點常是「人」（人性弱點、社交工程）。</li>
+<li>風險處理四策略：規避、降低、轉移、接受。資安管理三要素 People、Process、Technology。</li>
+</ul>
+<h3>加密與認證</h3>
+<ul>
+<li>對稱式（DES、AES）：加解密同一把金鑰，需安全傳送金鑰。非對稱式（RSA）：公鑰公開、私鑰保密，兩把不能互推。</li>
+<li>數位簽章：用「傳送者私鑰」簽、對方用其公鑰驗，確認來源、完整、不可否認。加密給某人則用「對方公鑰」。</li>
+<li>SSL/TLS（https）加密傳輸；數位浮水印用於版權保護；VPN 建立加密通道。</li>
+<li>生物辨識：指紋、視網膜比對。密碼要長、不常見、定期更換；禁止不同使用者用同密碼；不由管理者統一保管使用者密碼。</li>
+</ul>
+<h3>攻擊手法</h3>
+<div class="tbl"><table>
+<tr><th>名稱</th><th>特徵</th></tr>
+<tr><td>邏輯炸彈</td><td>條件成立才發作</td></tr>
+<tr><td>義大利臘腸術</td><td>每次偷一點點（如捨去的小數金額）</td></tr>
+<tr><td>蠕蟲 Worm</td><td>不需宿主、透過網路自我複製</td></tr>
+<tr><td>巨集型病毒</td><td>藏在 Office 巨集</td></tr>
+<tr><td>網路釣魚</td><td>假網站／信件騙取帳密</td></tr>
+<tr><td>DoS／DDoS</td><td>大量請求癱瘓服務（破壞可用性）</td></tr>
+<tr><td>欺騙 Spoofing</td><td>偽造來源 IP、身分</td></tr>
+<tr><td>重放攻擊</td><td>截取後重送合法封包</td></tr>
+<tr><td>字典攻擊</td><td>拿常見密碼清單試</td></tr>
+<tr><td>暴力攻擊</td><td>窮舉所有組合</td></tr>
+<tr><td>SQL Injection</td><td>防範：過濾字串並限制長度、限縮資料庫權限</td></tr>
+<tr><td>後門</td><td>開發者忘記移除的維護入口</td></tr>
+</table></div>
+<ul>
+<li>病毒是程式，須被執行才會感染；中毒時應關機、以乾淨原版開機處理。只在記憶體的病毒關機後消失。</li>
+<li>白帽駭客＝合法測試系統的安全專家。P2P 軟體本身不違法，違法的是分享盜版。</li>
+</ul>
+<h3>防護設備與作法</h3>
+<ul>
+<li>防火牆：依規則過濾封包、預設拒絕規則外封包；不能防所有病毒、不能擋內部對外攻擊、不負責用戶身分管理；也可用於廣域網路。</li>
+<li>IDS 偵測警示；IPS 偵測後主動阻擋。阻擋 DoS 靠 IDPS，不是多加路由器。</li>
+<li>用 SSH 取代 Telnet（明文）；伺服器只裝必要模組、裝最新修補程式。</li>
+<li>備份：備份要加密、異地存放，不和原檔放同一磁碟；遞增備份只備上次以來變動。RAID 1（鏡像）／RAID 10 有容錯。遠端複本、不斷電系統、備援系統屬可用性。</li>
+<li>實體安全：事前要有嚇阻效果；員工離職應在通知前先收回權限。</li>
+<li>智慧財產權：商標、專利、著作權。</li>
+</ul>
+</section>
+
+<section>
+<h2 id="s7">7. 常考計算題速查</h2>
+<p>每種題型一個公式加一個題庫例題，考前照著算一遍即可。</p>
+<div class="tbl"><table>
+<tr><th>題型</th><th>公式／方法</th><th>題庫例子</th></tr>
+<tr><td>位址線與記憶體</td><td>n 條位址線 → 2<sup>n</sup> Bytes</td><td>17 條 → 128KB；1GB 需 30 條；129KB 需 18 位元 MAR</td></tr>
+<tr><td>子網路遮罩（依主機數）</td><td>2<sup>h</sup>−2 ≥ 主機數，網路位元 = 32−h</td><td>每網段 30 台 → h=5 → 255.255.255.224</td></tr>
+<tr><td>子網路遮罩（依子網數）</td><td>借 s 位元，2<sup>s</sup> ≥ 子網數</td><td>Class C 切 32 個 → 借 5 位 → 255.255.255.248</td></tr>
+<tr><td>每網段可用主機</td><td>2<sup>h</sup> − 2</td><td>Class C 一網段 254 台</td></tr>
+<tr><td>傳輸時間</td><td>總位元 ÷ bps</td><td>6000 個 Big-5 字 ×16 bit ÷ 19200 = 5 秒</td></tr>
+<tr><td>圖片大小</td><td>寬×高×每點 Bytes</td><td>800×600×3 ≈ 1.37MB；4×6 吋 300dpi 全彩 ≈ 6.5MB</td></tr>
+<tr><td>二進位 → 十六進位</td><td>小數點往左、往右每 4 位一組</td><td>10010100101001.11110101 → 2529.F5</td></tr>
+<tr><td>十六進位 → 十進位</td><td>位值相加，小數乘 16<sup>−n</sup></td><td>CF.4 = 207.25</td></tr>
+<tr><td>十進位小數 → 二進位</td><td>乘 2 取整數</td><td>0.875 = 0.111</td></tr>
+<tr><td>位元運算</td><td>AND 全 1 才 1；OR 有 1 即 1；XOR 不同為 1</td><td>AB OR 99 = BB</td></tr>
+<tr><td>氣泡排序比較次數</td><td>n(n−1)/2</td><td>6 筆 = 15 次</td></tr>
+<tr><td>排容原理</td><td>|A∪B| = |A|+|B|−|A∩B|</td><td>8 位元「1 開頭或 00 結尾」= 128+64−32 = 160</td></tr>
+<tr><td>鴿籠原理</td><td>⌈人數 ÷ 籠數⌉</td><td>100 人至少 9 人同月生日</td></tr>
+<tr><td>IPv4 Class B 可用位址</td><td>2<sup>14</sup> × (2<sup>16</sup>−2)</td><td>16384 × 65534</td></tr>
+</table></div>
+<h3>IEEE 754 單精度浮點數</h3>
+<p>符號 1 位、指數 8 位（加偏移值 127）、尾數 23 位。先轉成 1.xxx × 2<sup>e</sup>，再填入各欄。</p>
+<pre>1640.625 = 11001101000.101₂ = 1.1001101000101 × 2¹⁰
+指數 10 + 127 = 137 = 10001001
+結果：0 10001001 10011010001010000000000</pre>
+</section>
+<p id="none">找不到符合的內容，換個關鍵字試試。</p>
+</main>
+</div>
+
+<script>
+(function(){
+  var main=document.getElementById('main'),toc=document.getElementById('toc');
+  var hs=main.querySelectorAll('h2,h3'),n=0;
+  hs.forEach(function(h){
+    if(!h.id)h.id='h'+(n++);
+    var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;
+    if(h.tagName==='H3')a.className='sub';
+    toc.appendChild(a);
+  });
+  var links=toc.querySelectorAll('a');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-80px 0px -70% 0px'});
+  hs.forEach(function(h){io.observe(h)});
+
+  // search
+  var items=main.querySelectorAll('li,tr,p:not(.byline):not(#none),pre');
+  var orig=new Map();items.forEach(function(el){orig.set(el,el.innerHTML)});
+  var q=document.getElementById('q'),none=document.getElementById('none');
+  function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  q.addEventListener('input',function(){
+    var t=q.value.trim(),any=false;
+    items.forEach(function(el){el.innerHTML=orig.get(el);el.classList.remove('hide')});
+    main.querySelectorAll('section,h3,.tbl,ul').forEach(function(el){el.classList.remove('hide')});
+    if(!t){none.style.display='none';return}
+    var re=new RegExp(esc(t),'gi');
+    items.forEach(function(el){
+      if(el.tagName==='TR'&&el.querySelector('th'))return;
+      if(re.test(el.textContent)){any=true;re.lastIndex=0;
+        var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),ns=[],x;while(x=w.nextNode())ns.push(x);
+        ns.forEach(function(tn){if(!re.test(tn.nodeValue)){re.lastIndex=0;return}re.lastIndex=0;var s=document.createElement('span');s.innerHTML=tn.nodeValue.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(re,'<mark>$&</mark>');tn.parentNode.replaceChild(s,tn)});
+      }else{el.classList.add('hide')}
+      re.lastIndex=0;
+    });
+    main.querySelectorAll('ul,.tbl').forEach(function(b){if(!b.querySelector('li:not(.hide),tr:not(.hide) td'))b.classList.add('hide')});
+    main.querySelectorAll('section').forEach(function(s){if(!s.querySelector('li:not(.hide),tr:not(.hide) td,p:not(.hide),pre:not(.hide)'))s.classList.add('hide')});
+    none.style.display=any?'none':'block';
+  });
+
+  // theme
+  var r=document.documentElement,b=document.getElementById('theme');
+  try{var sv=localStorage.getItem('csa-theme');if(sv)r.dataset.theme=sv}catch(e){}
+  b.onclick=function(){var dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=dark?'light':'dark';try{localStorage.setItem('csa-theme',r.dataset.theme)}catch(e){}};
+})();
+</script>
+</body>
+</html>
